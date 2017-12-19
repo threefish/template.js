@@ -1,6 +1,6 @@
-# [template.js](https://github.com/yanhaijing/template.js) [![Build Status](https://travis-ci.org/yanhaijing/template.js.svg?branch=master)](https://travis-ci.org/yanhaijing/template.js) [![release](https://img.shields.io/badge/release-v0.7.1-orange.svg)](https://github.com/yanhaijing/template.js/releases/tag/v0.7.1) [![spm package](http://spmjs.io/badge/template.js)](http://spmjs.io/package/template.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/template.js/blob/master/MIT-LICENSE.txt)
+# [template.js](https://github.com/yanhaijing/template.js) [![Build Status](https://travis-ci.org/yanhaijing/template.js.svg?branch=master)](https://travis-ci.org/yanhaijing/template.js) [![release](https://img.shields.io/badge/release-v0.7.1-orange.svg)](https://github.com/yanhaijing/template.js/releases/tag/v0.7.1) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/template.js/blob/master/MIT-LICENSE.txt)
 
-template.js 一款javascript模板引擎，简单，好用。
+template.js 一款javascript模板引擎，简单，好用，支持webpack和fis。
 
 ## 功能概述
 
@@ -14,6 +14,7 @@ template.js 一款javascript模板引擎，简单，好用。
 - 丰富的自定义配置
 - 支持数据过滤
 - 异常捕获功能
+- 伪子模版
 - 功能专一，简单好用
 
 ## 兼容性
@@ -22,35 +23,36 @@ template.js 一款javascript模板引擎，简单，好用。
 - Safari 6+ (Mac)
 - iOS 5+ Safari
 - Chrome 23+ (Windows, Mac, Android, iOS, Linux, Chrome OS)
-- Firefox 4+ (Windows, Mac, Android, Linux, Firefox OS)
+- Firefox 4+ (Windows, Mac, Android, Linux)
 - Internet Explorer 6+ (Windows, Windows Phone)
 - Opera 10+ (Windows, linux, Android)
 
+## 下载
+第一种方法，推荐使用npm安装和更新
+	
+	$ npm install template_js
+
+第二种方法，或者你也可以在GitHub，下载源文件或压缩包
+
 ## 如何使用？
+支持全局变量、AMD、commonjs、es6等模块系统
 
 ### 传统用法
 	
 	<script src="template.js"></script>
+	<script>
+		window.template()
+	</script>
 
 ### AMD
 
 	require(['template'], function (template) {
-		***
+		template()
 	});
 
-### Bower
+### commonjs
 
-	$ bower install template.js
-	$ bower install git://github.com/yanhaijing/template.js.git
-
-### spm
-
-	$ spm install template.js
-
-### npm
-
-	$ npm install template_js
-	$ npm install yanhaijing/template.js
+	var template = require('template_js')
 
 ## 快速上手
 
@@ -91,6 +93,9 @@ template.js 包含完整的单元测试和性能测试。详情请见[test](test
 ### Fis
 template.js从0.2.0开始支持[fis](http://fis.baidu.com/)，详情请看[这里](https://github.com/yanhaijing/fis-parser-template)。
 
+### webpack
+template.js从0.6.1开始支持[webpack](http://webpack.github.io/)，详情请看[这里](https://github.com/yanhaijing/template-loader)
+
 ## 贡献指南
 
 如果你想为template.js贡献代码，请采用fork + pull request 方式，并在发起pr前先将master上超前的代码rebase到自己的分支上。
@@ -104,15 +109,6 @@ template.js从0.2.0开始支持[fis](http://fis.baidu.com/)，详情请看[这�
 ### 发布npm
 	
 	$ npm publish
-
-### 发布spm
-临时将package.json中的名字修改为 template.js	
-
-	$ spm publish
-
-### 发布Bower
-	
-	$ bower register template.js git://github.com/yanhaijing/template.js.git
 
 ## 报告问题
 
@@ -138,8 +134,10 @@ template.js从0.2.0开始支持[fis](http://fis.baidu.com/)，详情请看[这�
 [TODO.md](TODO.md)
 
 ## 谁在使用
+- [百度知道](http://zhidao.baidu.com/)
 - [百度经验](http://jingyan.baidu.com/)
 - [百度师傅](http://shifu.baidu.com/)
+- 美团外卖
 
 想了解都有谁在使用，[点击这里](https://github.com/yanhaijing/template.js/issues/6)。
 
